@@ -70,7 +70,7 @@ function iniciarJuegoUnJugador() {
     document.getElementById('startModal').style.display = 'none';
 
     let score = 0;
-    let time = 275; // Tiempo inicial en segundos
+    let time = 90; // Tiempo inicial en segundos
 
     // Función para actualizar el temporizador
     function actualizarTemporizador() {
