@@ -30,6 +30,13 @@ h1 {
     z-index: 2;
 }
 
+#timer {
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    z-index: 2;
+}
+
 .score {
     position: absolute;
     top: 60px;
@@ -41,7 +48,7 @@ h1 {
 .modal {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 3;
     left: 0;
     top: 0;
     width: 100%;
@@ -57,6 +64,9 @@ h1 {
     text-align: center;
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    z-index: 3;
+    /* Un valor de z-index aún más alto para el contenido del modal */
+
 }
 
 /* Estilos del botón para cerrar el modal */
@@ -81,18 +91,45 @@ h1 {
     /* Esto coloca los basureros en la parte inferior */
     height: 70vh;
     /* Ajusta según sea necesario para la disposición de tu juego */
+    background-image: url('../img/131.jpg');
+    /* Reemplaza 'ruta_de_la_imagen.jpg' con la ruta de tu imagen de fondo */
+    background-size: cover;
+    /* Ajusta el tamaño de la imagen al contenedor */
+    background-repeat: no-repeat;
+    /* Evita que la imagen se repita */
+    background-position: center center;
+    width: 1064;
 }
+
 
 .trash-bin {
     width: 200px;
-    /* Ancho mayor para los basureros */
     height: 200px;
-    /* Alto mayor para los basureros */
     background-color: rgba(0, 0, 0, 0);
-    ;
     text-align: center;
     line-height: 200px;
     cursor: pointer;
+    position: absolute;
+    z-index: 0;
+}
+
+
+.trash-bin[data-bin="organico"] {
+    left: 20px;
+    /* Ajusta las coordenadas según tus necesidades */
+    top: 480px !important;
+}
+
+.trash-bin[data-bin="noRecicable"] {
+    left: 130px;
+    /* Ajusta las coordenadas según tus necesidades */
+    top: 480px !important;
+}
+
+.trash-bin[data-bin="recicable"] {
+    left: 240px;
+    /* Ajusta las coordenadas según tus necesidades */
+    top: 480px !important;
 }
 
 .trash-items-container {
@@ -112,4 +149,6 @@ h1 {
     text-align: center;
     line-height: 100px;
     cursor: pointer;
+    z-index: 1;
+    position: absolute;
 }
