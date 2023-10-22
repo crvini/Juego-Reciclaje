@@ -88,8 +88,6 @@ h1 {
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-end;
-    /* Esto coloca los basureros en la parte inferior */
-    height: 70vh;
     /* Ajusta según sea necesario para la disposición de tu juego */
     background-image: url('../img/131.jpg');
     /* Reemplaza 'ruta_de_la_imagen.jpg' con la ruta de tu imagen de fondo */
@@ -98,7 +96,8 @@ h1 {
     background-repeat: no-repeat;
     /* Evita que la imagen se repita */
     background-position: center center;
-    width: 1064;
+    width: 1016px;
+    height: 528px;
 }
 
 
